@@ -1,2 +1,0 @@
-# computer-store
-Computer store 
