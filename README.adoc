@@ -1,0 +1,8 @@
+= Computer Store
+
+Магазин по продаже компьютерной техники
+
+image:https://github.com/AlexBugrimov/computer-store/actions/workflows/gradle-main.yml/badge.svg[Store CI,link=https://github.com/AlexBugrimov/computer-store/actions/workflows/gradle-main.yml]
+
+== Техническое задание
+xref:docs/task_description.adoc[Task Description]
