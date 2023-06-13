@@ -1,0 +1,18 @@
+databaseChangeLog:
+  - changeSet:
+      id: load-data-product-type
+      author: BugrimovAlex
+      changes:
+        - loadData:
+            tableName: dn_product_type
+            usePreparedStatements: false
+            separator: ;
+            relativeToChangelogFile: true
+            file: product_type.csv
+            encoding: UTF-8
+            quotchar: ''''
+            columns:
+              - column:
+                  header: Name
+                  name: name
+                  type: STRING

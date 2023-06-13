@@ -1,4 +1,17 @@
 databaseChangeLog:
-  - preConditions:
-    - runningAs:
-        username: liquibase
+  - include:
+      file: db/changelog/changeset/V1__create-tables/create-product-type-table.yaml
+  - include:
+      file: db/changelog/changeset/V1__load-data/load-data-product-type.yaml
+  - include:
+      file: db/changelog/changeset/V1__create-tables/create-form-factor-table.yaml
+  - include:
+      file: db/changelog/changeset/V1__load-data/load-data-form-factor.yaml
+  - include:
+      file: db/changelog/changeset/V1__create-tables/create-manufacturer-table.yaml
+  - include:
+      file: db/changelog/changeset/V1__load-data/load-data-manufacturer.yaml
+  - include:
+      file: db/changelog/changeset/V1__create-tables/create-product-table.yaml
+  - include:
+      file: db/changelog/changeset/V1__load-data/load-data-product.yaml
