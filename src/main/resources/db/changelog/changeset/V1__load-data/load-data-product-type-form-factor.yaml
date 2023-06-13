@@ -1,0 +1,22 @@
+databaseChangeLog:
+  - changeSet:
+      id: load-data-product-type-form-factor
+      author: BugrimovAlex
+      changes:
+        - loadData:
+            tableName: rg_product_type_form_factor
+            usePreparedStatements: false
+            separator: ;
+            relativeToChangelogFile: true
+            file: product_type_form_factor.csv
+            encoding: UTF-8
+            quotchar: ''''
+            columns:
+              - column:
+                  header: ProductTypeId
+                  name: product_type_id
+                  type: NUMBER
+              - column:
+                  header: FormFactorId
+                  name: form_factor_id
+                  type: NUMBER

@@ -1,0 +1,18 @@
+databaseChangeLog:
+  - changeSet:
+      id: load-data-form-factor
+      author: BugrimovAlex
+      changes:
+        - loadData:
+            tableName: dn_form_factor
+            usePreparedStatements: false
+            separator: ;
+            relativeToChangelogFile: true
+            file: form_factor.csv
+            encoding: UTF-8
+            quotchar: ''''
+            columns:
+              - column:
+                  header: Name
+                  name: name
+                  type: STRING

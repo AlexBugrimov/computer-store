@@ -1,0 +1,18 @@
+databaseChangeLog:
+  - changeSet:
+      id: load-data-manufacturer
+      author: BugrimovAlex
+      changes:
+        - loadData:
+            tableName: dn_manufacturer
+            usePreparedStatements: false
+            separator: ;
+            relativeToChangelogFile: true
+            file: manufacturer.csv
+            encoding: UTF-8
+            quotchar: ''''
+            columns:
+              - column:
+                  header: Name
+                  name: name
+                  type: STRING

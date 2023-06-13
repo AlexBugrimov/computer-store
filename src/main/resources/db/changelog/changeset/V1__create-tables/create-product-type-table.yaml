@@ -1,0 +1,33 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-product-type
+      author: BugrimovAlex
+      changes:
+        - createTable:
+            tableName: dn_product_type
+            columns:
+              - column:
+                  name: product_type_id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+        - createTable:
+            tableName: rg_product_type_form_factor
+            columns:
+              - column:
+                  name: product_type_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+              - column:
+                  name: form_factor_id
+                  type: bigint
+                  constraints:
+                    nullable: false
